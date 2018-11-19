@@ -1,0 +1,32 @@
+extends teachers
+
+block content
+  .container
+    .row
+      .col-md-3
+        label Sort by:
+        select.btn
+          option Ascending
+          option Descending
+      .col-md-3
+        label View as:
+        select.btn
+          option Name
+          option Year
+          option Status
+    .size-2
+      .row
+        .col-md-2
+          select.btn.btn-primary
+            option 1st Quarter
+            option 2nd Quarter
+            option 3rd Quarter
+            option 4th Quarter
+    .size-1
+      table.table.table-bordered.bg-light
+        tr.text-center
+          th Student Number
+          th Student Name
+          th Grade Level
+          th Section
+          th Date Enrolled

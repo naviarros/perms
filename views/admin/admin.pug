@@ -1,0 +1,53 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title CZHS - Admin Dashboard
+  link(rel='stylesheet' type='text/css' href='/stylesheets/bootstrap.min.css')
+  link(rel='stylesheet' type='text/css' href='/stylesheets/custom.css')
+  link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+nav.navbar.navbar-expand-sm.bg-light
+  a.navbar-brand(href='#sidebar' data-toggle='collapse')
+    svg(width='30' height='30')
+      path(d='M0,5 30,5' stroke='#000' stoke-width='6')
+      path(d='M0,14 30,14' stroke='#000' stoke-width='6')
+      path(d='M0,23 30,23' stroke='#000' stoke-width='6')
+  ul.navbar-nav
+    li.nav-item
+      a.nav-link(href='#')
+        img.img-brand(src='/images/cielito-logo.png')
+  ul.navbar-nav.ml-auto.p-3
+    li.nav-item
+      i.fa.fa-user
+    li.nav-item.link-nav
+      a(href="").link-nav Admin
+    li.nav-item
+      span.active-icon
+#sidebar.side-nav.bg-light
+  a(href='/admin/teacherstab')
+    i.fa.fa-users
+    | TEACHERS
+  a(href='javascript:void(0)')
+    i.fa.fa-bookmark
+    | QUARTERS
+  a(href='javascript:void(0)')
+    i.fa.fa-print
+    | SUMMARY
+  a(href='javascript:void(0)')
+    i.fa.fa-list-alt
+    | CREDENTIALS
+.backbutton
+  i.fa.fa-arrow-left
+
+.maincontent
+  block content
+    .row
+      .form-group.col-md-12
+        .card
+          .card-body TEACHERS
+        .card
+          .card-body werw
+
+
+script(type='text/javascript' src='/javascripts/jquery-3.3.1.min.js')
+script(type='text/javascript' src='/javascripts/bootstrap.min.js')

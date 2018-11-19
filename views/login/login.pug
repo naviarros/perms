@@ -1,0 +1,34 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login
+  link(rel='stylesheet' type='text/css' href='/stylesheets/bootstrap.min.css')
+  link(rel='stylesheet' type='text/css' href='/stylesheets/custom.css')
+.login-panel
+  img.img-logo(src='/images/cielito-logo.png')
+  if errors
+    each error, i in errors
+      p.alert.alert-danger #{error.msg}
+  else 
+  form(method='post' action='/auth/login')
+    .form-group
+      .col-md-6.login-form
+        label.label Email:
+        input.form-control(type='text' name='username')
+    .form-group
+      .col-md-6.login-form
+        label.label Password:
+        input.form-control(type='password' name='password')
+    .form-group
+      .col-md-6.login-form
+        input.btn.sign-in-button(type='submit' value='Sign-in' name='')
+    .form-group
+      .col-md-6.login-form
+        a.help-block.forgot-pass(href='') Forgot Password?
+img.img-fade(src='/images/cielito-logo.png')
+div
+  p.title P.E.R.M.S
+  p.title-perms PERIODICAL EXAMINATION RECORDING MANAGEMENT SYSTEM
+script(type='text/javascript' src='/javascripts/jquery-3.3.1.min.js')
+script(type='text/javascript' src='/javascripts/bootstrap.min.js')
